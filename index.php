@@ -30,8 +30,9 @@
                             password" class="form-control input-sm">
                             <p></p>
                             <span class="btn btn-primary btn-sm">Entrar</span>
-                            <a href="registro.php"class="btn btn-danger btn-sm">
-                            Registrar</a>
+                            <!-- <?php  if(!$validar): ?> -->
+                            <a href="registro.php"class="btn btn-danger btn-sm">Registrar</a>
+                            <!-- <?php endif; ?> -->
                             <!-- <span class="btn btn-danger btn-sm">Registrar</span> -->
                         </form>
                 </div>
