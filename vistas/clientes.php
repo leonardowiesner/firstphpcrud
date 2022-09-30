@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>inicio</title>
+        <title>clientes</title>
         <?php require_once "menu.php"; ?>
     </head>
     <body>
