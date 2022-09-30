@@ -1,4 +1,4 @@
-CREATE SCHEMA `ventas` DEFAULT CHARACTER SET utf8mb4 ;
+CREATE DATABASE `ventas`;
 
 use ventas;
 

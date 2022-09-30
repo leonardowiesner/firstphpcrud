@@ -1,18 +1,3 @@
-<?php 
-	
-	require_once "clases/Conexion.php";
-	$obj= new conectar();
-	$conexion=$obj->conexion();
-
-	$sql="SELECT * from usuarios where email='admin'";
-	$result=mysqli_query($conexion,$sql);
-	$validar=0;
-	if(mysqli_num_rows($result) > 0){
-		header("location:index.php");
-	}
- ?>
-
-
 <!DOCTYPE html>
 <html>
 
@@ -34,17 +19,13 @@
                     <div class="panel panel-body">
                         <form id="frmRegistro">
                             <label>Nombre</label>
-                            <input type="text" class="form-control input-sm" name="
-                            nombre" id="nombre">
+                            <input type="text" class="form-control input-sm" name="nombre" id="nombre">
                             <label>Apellido</label>
-                            <input type="text" class="form-control input-sm" name="
-                            apellido" id="apellido">
+                            <input type="text" class="form-control input-sm" name="apellido" id="apellido">
                             <label>Usuario</label>
-                            <input type="text" class="form-control input-sm" name="
-                            usuario" id="usuario">
+                            <input type="text" class="form-control input-sm" name="usuario" id="usuario">
                             <label>Password</label>
-                            <input type="text" class="form-control input-sm" name="
-                            password" id="password">
+                            <input type="text" class="form-control input-sm" name="password" id="password">
                             <p></p>
                             <span class="btn btn-primary" id="registro">Registrar</span>
                             <a href="index.php" class="btn btn-default">Regresar login</a>
@@ -70,12 +51,12 @@
                 alert("Debes llenar todos los campos !!");
                 return false;
             }
-            datos = $('#frmRegistro').serialize();
+            datos=$('#frmRegistro').serialize();
             $.ajax({
                 type:"POST",
                 data:datos,
-                url:"procesos/regLogin/registarUsuario.php",
-                success: function(r) {
+                url:"procesos/regLogin/registrarUsuario.php",
+                success:function(r) {
                     alert(r);
                     if(r==1){
                         alert("Agregado con exito");
