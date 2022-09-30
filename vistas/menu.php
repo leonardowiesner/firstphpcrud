@@ -1,3 +1,4 @@
+
 <?php require_once "dependencias.php" ?>
 
 <!DOCTYPE html>
@@ -36,18 +37,27 @@
               <li><a href="articulos.php">Articulos</a></li>
             </ul>
           </li>
-          <li><a href="usuarios.php"><span class="glyphicon glyphicon-user"></span>
-           Administrar usuarios</a>
-          </li>
+
+
+        <?php
+           // if($_SESSION['usuario']=="admin"):
+         ?>
+           <li><a href="usuarios.php"><span class="glyphicon glyphicon-user"></span> Administrar usuarios</a>
+            </li>
+         <?php 
+       //endif;
+          ?>
+
+
            <li><a href="clientes.php"><span class="glyphicon glyphicon-user"></span> Clientes</a>
           </li>
           <li><a href="ventas.php"><span class="glyphicon glyphicon-usd"></span> Vender Articulo</a>
           </li>
           
           <li class="dropdown" >
-            <a href="#" style="color: red"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuario:  <span class="caret"></span></a>
+            <a href="#" style="color: red"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuario: <?php //echo $_SESSION['usuario']; ?>  <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li> <a style="color: red" href="../procesos/salir.php"><span class="glyphicon glyphicon-off"></span> Salir</a></li>
+              <li> <a style="color: red" href="../procesos/regLogin/salir.php"><span class="glyphicon glyphicon-off"></span> Salir</a></li>
               
             </ul>
           </li>

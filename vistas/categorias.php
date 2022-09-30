@@ -5,12 +5,11 @@
 
     
 ?>
-
+<?php require_once "menu.php"; ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>categorias</title>
-        <?php require_once "menu.php"; ?>
     </head>
     <body>
         
@@ -18,6 +17,6 @@
 </html>
 <?php
     }else{
-        header("../index.php");
+        header("location:../index.php");
     }
 ?>
